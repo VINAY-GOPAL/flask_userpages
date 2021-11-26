@@ -1,10 +1,16 @@
+'''
+@Author: Vinay gopal
+Date: 25/11/2021
+'''
+
+# Imports libraries from flask
 from flask import Flask, render_template, request, url_for, redirect, session
 import pymongo
 import bcrypt
 
 app = Flask(__name__)
 app.secret_key = "testing"
-client = pymongo.MongoClient("mongodb+srv://vinaygopal:vinay@cluster0.n4auo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://vinaygopal44:vinaygopal@cluster0.n4auo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db = client.get_database('total_records')
 records = db.register
 
